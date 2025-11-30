@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web_lawangrejo</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CDN ICON FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  
+    const form = document.getElementById('contact-form');
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      let nama  = document.querySelector('input[name="from_name"]').value;
+      let email = document.querySelector('input[name="reply_to"]').value;
+      let pesan = document.querySelector('textarea[name="message"]').value;
+  
+      // Nomor tujuan WA (format internasional tanpa +)
+      let nomor = "+62 856-4102-3439";
+  
+      // Format pesan
+      let teks =
+        "Halo Admin,%0A%0A" +
+        "*Nama:* " + nama + "%0A" +
+        "*Email:* " + email + "%0A" +
+        "*Pesan:* " + pesan;
+  
+      // Buka WhatsApp
+      let url = "https://wa.me/" + nomor + "?text=" + teks;
+  
+      window.open(url, "_blank");
+    });
+  });
+  </script>
+  
+<body>
+
+  <nav class="navbar">
+    <h2>Desa Lawangrejo</h2>
+  
+    <details class="menu-details">
+      <summary class="menu-summary">☰</summary>
+      <ul class="menu-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </details>
+  </nav>
+
+<div class="container fade-in">
+  <h2 class="section-title">Kontak Kami</h2>
+
+  <p><b><i class="fas fa-map-marker-alt" style="color:#ff4d4d;"></i> Alamat:</b><br>
+     Sidorejo, Lawangrejo, Kecamatan Pemalang, Kabupaten Pemalang, Jawa Tengah, 52316.</p>
+
+  <p><b><i class="fas fa-phone" style="color:#1e90ff;"></i> Telepon:</b>
+     <a href="tel:+6285302840056" style="color:#007bff;">+62 853-0284-0056</a></p>
+
+  <p><b><i class="fas fa-envelope" style="color:#ff9900;"></i> Email:</b>
+     <a href="mailto:bumdeslawangrejo@gmail.com" style="color:#007bff;">
+       bumdeslawangrejo@gmail.com
+     </a>
+  </p>
+  <p><b><i class="fas fa-globe" style="color:#28a745;"></i> Website:</b>
+     <a href="https://lawangrejo.desa.id/" target="_blank" style="color:#007bff;">
+       https://lawangrejo.desa.id/
+     </a>
+  </p>
+
+  <!-- TOMBOL WHATSAPP -->
+  <a href="https://wa.me/6285842115565?text=Halo%20Admin%20Desa%20Lawangrejo"
+     target="_blank"
+     style="
+       display:inline-block;
+       margin-top:15px;
+       background:#25D366;
+       color:white;
+       padding:12px 20px;
+       border-radius:8px;
+       font-size:16px;
+       text-decoration:none;">
+     <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+  </a>
+
+  <!-- GOOGLE MAPS -->
+  <h3 style="margin-top:25px;">Lokasi Balai Desa:</h3>
+
+  <div class="map-container">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.338366875839!2d109.377565!3d-6.891716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb84a3a1c59ef%3A0xe2f77c6f14a2fdb1!2sSidorejo%2C%20Lawangrejo%2C%20Kec.%20Pemalang%2C%20Kabupaten%20Pemalang%2C%20Jawa%20Tengah%2052316!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+        width="100%" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+  </div>
+
+  <h3 style="margin-top:25px;">Ikuti Kami:</h3>
+
+  <div class="sosmed">
+    <a href="https://www.facebook.com/share/17PewRW7M5/" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@singgissoes7860" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <br><br>
+
+  <div class="contact-box fade-in">
+    <h3>Kirim Pesan ke Admin</h3>
+  
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Nama Anda" required>
+      <input type="email" name="reply_to" placeholder="Email Anda" required>
+      <textarea name="message" rows="5" placeholder="Tulis pesan..." required></textarea>
+      <button type="submit">Kirim</button>
+    </form>    
+       
+  </div>
+</div>
+<footer>
+  © 2025 Balai Desa Lawangrejo
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
