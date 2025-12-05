@@ -1,22 +1,22 @@
-
 html {
     height: 100%;
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    
+
     background: linear-gradient(to bottom, #d9e8ff, #ffffff);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-  }  
+}
+
 /* NAVBAR – GLASSMORPHISM */
 nav {
-    background: rgba(0, 102, 255, 0.8);
+    background: rgba(0, 196, 69, 0.8);
     backdrop-filter: blur(10px);
     padding: 15px 25px;
     display: flex;
@@ -30,7 +30,7 @@ nav {
 }
 
 nav h2 {
-    color: #cbb421;
+    color: #37227a;
     font-size: 24px;
     font-weight: 700;
 }
@@ -46,7 +46,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffe066;
+    color: #ffe176;
     text-shadow: 0 0 10px rgba(255, 255, 150, 0.7);
 }
 
@@ -54,7 +54,7 @@ nav a:hover {
 .menu-toggle {
     display: none;
     font-size: 28px;
-    color: white;
+    color: rgb(4, 4, 4);
     cursor: pointer;
 }
 
@@ -68,7 +68,7 @@ nav a:hover {
 /* TITLES */
 .section-title {
     font-size: 30px;
-    color: #0056cc;
+    color: #0d0d0e;
     margin-bottom: 20px;
     text-align: center;
     letter-spacing: 1px;
@@ -101,7 +101,7 @@ nav a:hover {
     background: white;
     padding: 30px;
     border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
     border: 1px solid #e3eeff;
     transition: 0.3s;
 }
@@ -131,7 +131,7 @@ textarea:focus {
 
 button {
     background: linear-gradient(90deg, #0066ff, #4da6ff);
-    color: rgb(243, 79, 79);
+    color: rgb(10, 9, 9);
     padding: 12px 25px;
     border: none;
     border-radius: 10px;
@@ -187,7 +187,7 @@ button:hover {
 
 /* FOOTER */
 footer {
-    background: linear-gradient(90deg, #0066ff, #4da6ff);
+    background: #399cf8;
     color: white;
     padding: 15px;
     text-align: center;
@@ -217,7 +217,7 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: #0066ff;
+        background: #005dc7;
         width: 100%;
         text-align: center;
         padding: 15px 0;
@@ -230,62 +230,6 @@ footer {
 
     .nav-links.active {
         display: flex;
-    }
-}
-
-/* HAMBURGER MENU ANIMATION */
-.menu-toggle {
-    width: 32px;
-    height: 28px;
-    position: relative;
-    cursor: pointer;
-    display: none;
-}
-
-.menu-toggle span {
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background: white;
-    left: 0;
-    border-radius: 5px;
-    transition: .4s ease;
-}
-
-/* Garis 1 */
-.menu-toggle span:nth-child(1) {
-    top: 0px;
-}
-
-/* Garis 2 */
-.menu-toggle span:nth-child(2) {
-    top: 12px;
-}
-
-/* Garis 3 */
-.menu-toggle span:nth-child(3) {
-    top: 24px;
-}
-
-/* Saat tombol aktif → jadi icon X */
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 12px;
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 12px;
-}
-
-/* Munculkan di layar HP */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
     }
 }
 
@@ -414,7 +358,7 @@ footer {
 
 .section-title {
     font-size: 28px;
-    color: #0056cc;
+    color: #0056ce;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -432,8 +376,10 @@ footer {
 }
 
 .karyawan-table th {
-    background-color: #0066ff;
-    color: rgb(252, 177, 1);
+    text-align: center;
+    font-size: 20px;
+    background-color: #2b22a0;
+    color: rgb(255, 255, 255);
 }
 
 .karyawan-table tr:nth-child(even) {
@@ -445,51 +391,122 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #006eff; /* sesuaikan warna */
+    background-color: #0077ff;
+    /* sesuaikan warna */
     padding: 10px 20px;
     color: white;
-  }
-  
-  .menu-details {
+}
+
+.menu-details {
     position: relative;
-  }
-  
-  .menu-summary {
+}
+
+.menu-summary {
     list-style: none;
     cursor: pointer;
     font-size: 24px;
     color: white;
     user-select: none;
-  }
-  
-  .menu-summary::-webkit-details-marker {
-    display: none; /* hilangkan marker default di Chrome */
-  }
-  
-  .menu-list {
+}
+
+.menu-summary::-webkit-details-marker {
+    display: none;
+    /* hilangkan marker default di Chrome */
+}
+
+.menu-list {
     margin: 0;
     padding: 0;
     list-style: none;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #006eff; /* warna latar menu */
-    border: 1px solid #006eff;
+    background-color: #4671a8;
+    /* warna latar menu */
+    border: 1px solid #000000;
     display: none;
-  }
-  
-  .menu-list li a {
+}
+
+.menu-list li a {
     display: block;
     padding: 10px 20px;
     color: white;
     text-decoration: none;
-  }
-  
-  .menu-list li a:hover {
+}
+
+.menu-list li a:hover {
     background-color: #006eff;
+}
+
+.menu-details[open] .menu-list {
+    display: block;
+    /* tampilkan menu saat details terbuka */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
   }
   
-  .menu-details[open] .menu-list {
-    display: block; /* tampilkan menu saat details terbuka */
+  /* pastikan setiap kartu bisa menyesuaikan lebar */
+  .service-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.5s, box-shadow 0.5s;
+    perspective: 1000px;
+  
+    /* kunci: atur lebar fleksibel supaya 2 kolom */
+    flex: 1 1 calc(50% - 25px);
+    /* atau bisa: width: calc(50% - 25px); */
+    box-sizing: border-box;
   }
   
+  .service-card i {
+    font-size: 2.5rem;
+    color: #020202;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .service-card:hover {
+    transform: rotateY(10deg) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.25);
+  }
+  
+  /* contohnya: pada layar sangat sempit (mobile), bisa satu kolom saja */
+  @media (max-width: 600px) {
+    .service-card {
+      flex: 1 1 100%;
+    }
+  }
+  
+
+.card-section {
+    background-color: #fff;
+    /* latar putih (atau sesuai selera) */
+    border: 1px solid #ddd;
+    /* garis pinggir tipis */
+    border-radius: 8px;
+    /* sudut membulat */
+    padding: 20px;
+    /* ruang di dalam card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* bayangan lembut */
+    max-width: 800px;
+    /* lebar maksimal — bisa kamu ubah */
+    margin: 20px auto;
+    /* jarak atas/bawah + rata tengah horisontal */
+}
+
+.card-section .section-title {
+    margin-top: 0;
+    /* agar judul card tidak terlalu jauh dari atas */
+}
