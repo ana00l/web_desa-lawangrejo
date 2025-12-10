@@ -1,139 +1,206 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>web_lawangrejo</title>
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css" />
   <!-- CDN ICON FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Tambahan style untuk jam kerja */
+    .working-hours {
+      margin-top: 25px;
+    }
+    .working-hours h3 {
+      font-size: 1.3em;
+      margin-bottom: 8px;
+    }
+    .working-hours ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .working-hours ul li {
+      margin-bottom: 4px;
+    }
+
+    /* Style untuk status buka/tutup */
+    #status-open {
+      margin-top: 10px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    .open-now {
+      color: #28a745;
+    }
+    .closed-now {
+      color: #dc3545;
+    }
+  </style>
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-  
-    const form = document.getElementById('contact-form');
-  
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-  
-      let nama  = document.querySelector('input[name="from_name"]').value;
-      let email = document.querySelector('input[name="reply_to"]').value;
-      let pesan = document.querySelector('textarea[name="message"]').value;
-  
-      // Nomor tujuan WA (format internasional tanpa +)
-      let nomor = "+62 856-4102-3439";
-  
-      // Format pesan
-      let teks =
-        "Halo Admin,%0A%0A" +
-        "*Nama:* " + nama + "%0A" +
-        "*Email:* " + email + "%0A" +
-        "*Pesan:* " + pesan;
-  
-      // Buka WhatsApp
-      let url = "https://wa.me/" + nomor + "?text=" + teks;
-  
-      window.open(url, "_blank");
-    });
-  });
-  </script>
-  
 <body>
 
   <nav class="navbar">
     <h2>Desa Lawangrejo</h2>
-  
+
     <details class="menu-details">
       <summary class="menu-summary">☰</summary>
       <ul class="menu-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="struktur.html">Struktur</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
         <li><a href="galeri.html">Galeri</a></li>
         <li><a href="contact.html">Kontak</a></li>
       </ul>
     </details>
   </nav>
 
-<div class="container fade-in">
-  <h2 class="section-title">Kontak </h2>
+  <div class="container fade-in">
+    <h2 class="section-title">Kontak</h2>
 
-  <p><b><i class="fas fa-map-marker-alt" style="color:#ff4d4d;"></i> Alamat:</b><br>
-     Sidorejo, Lawangrejo, Kecamatan Pemalang, Kabupaten Pemalang, Jawa Tengah, 52316.</p>
+    <p><b><i class="fas fa-map-marker-alt" style="color:#ff4d4d;"></i> Alamat:</b><br>
+       Sidorejo, Lawangrejo, Kecamatan Pemalang, Kabupaten Pemalang, Jawa Tengah, 52316.</p>
 
-  <p><b><i class="fas fa-phone" style="color:#1e90ff;"></i> Telepon:</b>
-     <a href="tel:+6285302840056" style="color:#007bff;">+62 853-0284-0056</a></p>
+    <p><b><i class="fas fa-phone" style="color:#1e90ff;"></i> Telepon:</b>
+       <a href="tel:+6285302840056" style="color:#007bff;">+62 853-0284-0056</a></p>
 
-  <p><b><i class="fas fa-envelope" style="color:#ff9900;"></i> Email:</b>
-     <a href="mailto:bumdeslawangrejo@gmail.com" style="color:#007bff;">
-       bumdeslawangrejo@gmail.com
-     </a>
-  </p>
-  <p><b><i class="fas fa-globe" style="color:#28a745;"></i> Website:</b>
-     <a href="https://lawangrejo.desa.id/" target="_blank" style="color:#007bff;">
-       https://lawangrejo.desa.id/
-     </a>
-  </p>
+    <p><b><i class="fas fa-envelope" style="color:#ff9900;"></i> Email:</b>
+       <a href="mailto:bumdeslawangrejo@gmail.com" style="color:#007bff;">
+         bumdeslawangrejo@gmail.com
+       </a>
+    </p>
 
-  <!-- TOMBOL WHATSAPP -->
-  <a href="https://wa.me/6285842115565?text=Halo%20Admin%20Desa%20Lawangrejo"
-     target="_blank"
-     style="
-       display:inline-block;
-       margin-top:15px;
-       background:#25D366;
-       color:white;
-       padding:12px 20px;
-       border-radius:8px;
-       font-size:16px;
-       text-decoration:none;">
-     <i class="fab fa-whatsapp"></i> Chat via WhatsApp
-  </a>
+    <p><b><i class="fas fa-globe" style="color:#28a745;"></i> Website:</b>
+       <a href="https://lawangrejo.desa.id/" target="_blank" style="color:#007bff;">
+         https://lawangrejo.desa.id/
+       </a>
+    </p>
 
-  <!-- GOOGLE MAPS -->
-  <h3 style="margin-top:25px;">Lokasi Balai Desa:</h3>
+    <!-- Tambahan: Jam Kerja -->
+    <div class="working-hours">
+      <h3><i class="fas fa-clock" style="color:#3f3939;"></i> Jam Kerja</h3>
+      <ul>
+        <li>Senin – Kamis: 08:00 – 16:00 WIB</li>
+        <li>Jumat: 08:00 – 12:00 WIB</li>
+        <li>Sabtu & Minggu: Libur / Hubungi via WhatsApp</li>
+      </ul>
+      <div id="status-open"></div>
+    </div>
 
-  <div class="map-container">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.338366875839!2d109.377565!3d-6.891716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb84a3a1c59ef%3A0xe2f77c6f14a2fdb1!2sSidorejo%2C%20Lawangrejo%2C%20Kec.%20Pemalang%2C%20Kabupaten%20Pemalang%2C%20Jawa%20Tengah%2052316!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
+    <!-- TOMBOL WHATSAPP -->
+    <a href="https://wa.me/6285302840056?text=Halo%20Admin%20Desa%20Lawangrejo"
+       target="_blank"
+       style="
+         display:inline-block;
+         margin-top:15px;
+         background:#25D366;
+         color:white;
+         padding:12px 20px;
+         border-radius:8px;
+         font-size:16px;
+         text-decoration:none;">
+       <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+    </a>
+
+    <!-- GOOGLE MAPS -->
+    <h3 style="margin-top:25px;">Lokasi Balai Desa:</h3>
+
+    <div class="map-container">
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.338366875839!2d109.377565!3d-6.891716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb84a3a1c59ef%3A0xe2f77c6f14a2fdb1!2sSidorejo%2C%20Lawangrejo%2C%20Kec.%20Pemalang%2C%20Kabupaten%20Pemalang%2C%20Jawa%20Tengah%2052316!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+      </iframe>
+    </div>
+    <br><br>
   </div>
 
-  <h3 style="margin-top:25px;">Ikuti Kami:</h3>
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/17PewRW7M5/" target="_blank" aria-label="Facebook Desa Lawangrejo"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/@singgissoes7860" target="_blank" aria-label="YouTube Desa Lawangrejo"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/6285302840056?text=Halo%20Admin%20Desa%20Lawangrejo" target="_blank" aria-label="WhatsApp Desa Lawangrejo"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div>© 2025 Balai Desa Lawangrejo.Semua Hak Dilindungi</div>
+    <div>Jl. HOS Cokro Aminoto No. 3  Desa Lawangrejo Kec/Kab Pemalang | Telp: +62 853-0284-0056</div>
+  </footer>
 
-  <div class="sosmed">
-    <a href="https://www.facebook.com/share/17PewRW7M5/" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://instagram.com" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@singgissoes7860" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
-  </div>
+  <script>
+    // Script WhatsApp (sesuai kode kamu sebelumnya)
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-  <br><br>
+        let nama  = document.querySelector('input[name="from_name"]').value;
+        let email = document.querySelector('input[name="reply_to"]').value;
+        let pesan = document.querySelector('textarea[name="message"]').value;
 
-  <div class="contact-box fade-in">
-    <h3>Kirim Pesan ke Admin</h3>
-  
-    <form id="contact-form">
-      <input type="text" name="from_name" placeholder="Nama Anda" required>
-      <input type="email" name="reply_to" placeholder="Email Anda" required>
-      <textarea name="message" rows="5" placeholder="Tulis pesan..." required></textarea>
-      <button type="submit">Kirim</button>
-    </form>    
-       
-  </div>
-</div>
-<footer>
-  © 2025 Balai Desa Lawangrejo
-</footer>
+        // Nomor tujuan WA (format internasional tanpa +)
+        let nomor = "6285302840056";
 
-<script src="script.js"></script>
+        // Format pesan
+        let teks =
+          "Halo Admin,%0A%0A" +
+          "*Nama:* " + nama + "%0A" +
+          "*Email:* " + email + "%0A" +
+          "*Pesan:* " + pesan;
+
+        // Buka WhatsApp
+        let url = "https://wa.me/" + nomor + "?text=" + teks;
+
+        window.open(url, "_blank");
+      });
+    });
+
+    // Script untuk status buka/tutup
+    const businessHours = {
+  1: { open: 8 * 60, close: 16 * 60 },  // Senin
+  2: { open: 8 * 60, close: 16 * 60 },  // Selasa
+  3: { open: 8 * 60, close: 16 * 60 },  // Rabu
+  4: { open: 8 * 60, close: 16 * 60 },  // Kamis
+  5: { open: 8 * 60, close: 11 * 60 },  // Jumat
+  6: null,  // Sabtu
+  0: null   // Minggu
+};
+
+function updateStatus() {
+  const now = new Date();
+  const day = now.getDay();
+  const minutesNow = now.getHours() * 60 + now.getMinutes();
+  const statusEl = document.getElementById('status-open');
+  const today = businessHours[day];
+
+  if (!today) {
+    // Hari libur (Sabtu / Minggu)
+    statusEl.textContent = "Hari ini: Tutup";
+    statusEl.className = 'closed-now';
+  } else if (minutesNow < today.open) {
+    // sebelum waktu buka
+    const openHour = Math.floor(today.open / 60);
+    const openMin  = today.open % 60;
+    const mm = openMin < 10 ? "0" + openMin : openMin;
+    statusEl.textContent = "Segera buka jam " + openHour + ":" + mm + " WIB";
+    statusEl.className = 'closed-now';
+  } else if (minutesNow >= today.open && minutesNow < today.close) {
+    // saat buka
+    statusEl.textContent = "Sekarang: Buka";
+    statusEl.className = 'open-now';
+  } else {
+    // sudah tutup hari ini
+    statusEl.textContent = "Sudah Tutup";
+    statusEl.className = 'closed-now';
+  }
+}
+
+updateStatus();
+setInterval(updateStatus, 60000);
+  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>

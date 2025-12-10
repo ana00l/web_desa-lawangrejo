@@ -128,12 +128,3 @@ document.getElementById('linkVisiMisi').addEventListener('click', function(e) {
   el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
 });
 
-
-const aboutToggle = document.querySelector('.about-toggle');
-const submenu = document.querySelector('.submenu');
-
-aboutToggle.addEventListener('click', function(e) {
-  e.preventDefault();
-  submenu.style.display =
-    submenu.style.display === "block" ? "none" : "block";
-});

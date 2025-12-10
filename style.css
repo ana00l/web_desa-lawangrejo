@@ -111,84 +111,11 @@ nav a:hover {
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
 }
 
-/* FORM */
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border: 1px solid #090a0c;
-    border-radius: 8px;
-    background: #fafafa;
-    transition: 0.3s;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #0066ff;
-    box-shadow: 0 0 8px rgba(0, 102, 255, 0.3);
-}
-
-button {
-    background: linear-gradient(90deg, #0066ff, #4da6ff);
-    color: rgb(10, 9, 9);
-    padding: 12px 25px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(90deg, #004ccc, #1e90ff);
-}
-
-/* SOSMED ICONS – GLOSSY */
-.sosmed {
-    margin-top: 15px;
-    display: flex;
-    gap: 18px;
-}
-
-.sosmed a {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 26px;
-    color: white;
-    transition: 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-/* ICON COLORS */
-.fb {
-    background: #1877f2;
-}
-
-.ig {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-.yt {
-    background: #ff0000;
-}
-
-.sosmed a:hover {
-    transform: scale(1.18) rotate(5deg);
-    filter: brightness(1.2);
-}
 
 /* FOOTER */
 footer {
     background: #399cf8;
-    color: white;
+    color: rgb(249, 246, 246);
     padding: 15px;
     text-align: center;
     margin-top: auto;
@@ -448,46 +375,46 @@ footer {
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
-  }
-  
-  /* pastikan setiap kartu bisa menyesuaikan lebar */
-  .service-card {
+}
+
+/* pastikan setiap kartu bisa menyesuaikan lebar */
+.service-card {
     background: #fff;
     padding: 25px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.5s, box-shadow 0.5s;
     perspective: 1000px;
-  
+
     /* kunci: atur lebar fleksibel supaya 2 kolom */
     flex: 1 1 calc(50% - 25px);
     /* atau bisa: width: calc(50% - 25px); */
     box-sizing: border-box;
-  }
-  
-  .service-card i {
+}
+
+.service-card i {
     font-size: 2.5rem;
     color: #020202;
     margin-bottom: 15px;
-  }
-  
-  .service-card h3 {
+}
+
+.service-card h3 {
     margin-bottom: 10px;
-  }
-  
-  .service-card:hover {
+}
+
+.service-card:hover {
     transform: rotateY(10deg) scale(1.05);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.25);
-  }
-  
-  /* contohnya: pada layar sangat sempit (mobile), bisa satu kolom saja */
-  @media (max-width: 600px) {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* contohnya: pada layar sangat sempit (mobile), bisa satu kolom saja */
+@media (max-width: 600px) {
     .service-card {
-      flex: 1 1 100%;
+        flex: 1 1 100%;
     }
-  }
-  
+}
+
 
 .card-section {
     background-color: #fff;
@@ -502,11 +429,67 @@ footer {
     /* bayangan lembut */
     max-width: 800px;
     /* lebar maksimal — bisa kamu ubah */
-    margin: 20px auto;
+    margin: 10px auto;
     /* jarak atas/bawah + rata tengah horisontal */
 }
 
 .card-section .section-title {
     margin-top: 0;
     /* agar judul card tidak terlalu jauh dari atas */
+}
+
+
+.footer .social-icons {
+    margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+    color: #333;
+    margin: 0 8px;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    /* Transisi dan animasi hover */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.3) rotate(10deg);
+    color: #007bff;
+}
+
+
+
+.footer .social-icons a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin: 0 12px;
+    display: inline-block;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+}
+
+/* Efek glow + zoom + rotate */
+.footer .social-icons a:hover {
+    transform: scale(1.3) rotate(8deg);
+    color: #ef6335;
+    /* warna berubah emas */
+    text-shadow: 0 0 12px rgba(88, 255, 255, 0.9);
+}
+
+/* Animasi muncul dari bawah */
+.social-icons {
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
